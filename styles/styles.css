@@ -1,5 +1,15 @@
+:root {
+    --primary-color: darkblue;
+    --shadow-color: gray;
+    --img-width: 150px;
+    --border-width: 1px;
+    --shadow-h-offset: 0;
+    --shadow-v-offset: 0;
+    --shadow-blur: 30px;
+}
+
 nav {
-    background-color: darkblue;
+    background-color: var(--primary-color, darkblue);
     padding: 10px;
 }
 
@@ -9,22 +19,30 @@ nav a {
     padding: 20px;
 }
 
+img {
+    width: var(--img-width);
+    height: auto;
+    border: var(--border-width, 1px) solid black;
+    padding: 2px;
+    box-shadow: var(--shadow-h-offset, 0) var(--shadow-v-offset) var(--shadow-blur) var(--shadow-color, gray);
+}
+
 main {
     max-width: 840px;
 }
 
 main img {
-    width: 150px;
+    width: var(--img-width);
     height: auto;
-    border: 1px solid rgb(0 0 0 / 0.45);
+    border: var(--border-width, 1px) solid rgb(0 0 0 / 0.45);
     padding: 0;
-    box-shadow: 0 0 30px gray;
+    box-shadow: var(--shadow-h-offset, 0) var(--shadow-v-offset) var(--shadow-blur) var(--shadow-color, gray);
 }
 
 aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
+    border: var(--border-width, 1px) solid rgb(0 0 0 / 0.2);
     padding: 1rem;
     background-color: #eee;
     color: #333;
@@ -38,20 +56,12 @@ aside img {
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid black;
+    border-top: var(--border-width, 1px) solid black;
     text-align: center;
 }
 
 h1 {
-    color: darkblue;
-}
-
-img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    color: var(--primary-color, darkblue);
 }
 
 p {
