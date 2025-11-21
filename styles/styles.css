@@ -1,11 +1,19 @@
 :root {
-    --primary-color: darkblue;
+    --primary-color: rgb(220, 120, 0);
+    --img-border-color: rgb(0 0 0 / 0.4);
+    --border-color: rgb(0 0 0 / 0.05);
     --shadow-color: gray;
     --img-width: 150px;
     --border-width: 1px;
     --shadow-h-offset: 0;
     --shadow-v-offset: 0;
     --shadow-blur: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
@@ -22,9 +30,10 @@ nav a {
 img {
     width: var(--img-width);
     height: auto;
-    border: var(--border-width, 1px) solid black;
+    border: var(--border-width, 1px) solid var(--img-border-color, black);
     padding: 2px;
-    box-shadow: var(--shadow-h-offset, 0) var(--shadow-v-offset) var(--shadow-blur) var(--shadow-color, gray);
+    box-shadow: var(--shadow-h-offset, 0) var(--shadow-v-offset, 0) var(--shadow-blur, 30px)
+    var(--shadow-color, gray);
 }
 
 main {
@@ -34,24 +43,29 @@ main {
 main img {
     width: var(--img-width);
     height: auto;
-    border: var(--border-width, 1px) solid rgb(0 0 0 / 0.45);
+    border: var(--border-width, 1px) solid var(--img-border-color, black);
     padding: 0;
-    box-shadow: var(--shadow-h-offset, 0) var(--shadow-v-offset) var(--shadow-blur) var(--shadow-color, gray);
+    box-shadow: var(--shadow-h-offset, 0) var(--shadow-v-offset, 0) var(--shadow-blur, 30px)
+    var(--shadow-color, gray);
+    float: right;
+    margin: 0 0 1rem 1rem
 }
 
 aside {
     width: 20rem;
-    margin: 1rem;
-    border: var(--border-width, 1px) solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
     text-align: center;
+    position: relative;
 }
 
 aside img {
     width: 200px;
     height: auto;
+}
+
+aside h2 {
+    position: absolute;
+    top: 25px;
+    left: 120px;
 }
 
 footer {
@@ -62,8 +76,23 @@ footer {
 
 h1 {
     color: var(--primary-color, darkblue);
+    margin: 1rem
 }
 
 p {
+    margin-left: 1rem;
     padding: 0;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: var(--border-width, 1px) solid var(--border-color);
+    padding: 1rem;
+    background-color: #eee;
+    color: #444;
+}
+
+.bullets {
+    padding-left: 2rem;
 }
