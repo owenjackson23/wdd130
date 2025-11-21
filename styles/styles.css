@@ -51,6 +51,10 @@ main img {
     margin: 0 0 1rem 1rem
 }
 
+main p {
+    padding: 1rem;
+}
+
 aside {
     width: 20rem;
     text-align: center;
@@ -80,7 +84,6 @@ h1 {
 }
 
 p {
-    margin-left: 1rem;
     padding: 0;
 }
 
