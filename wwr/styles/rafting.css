@@ -3,6 +3,7 @@
     --secondary-color: rgb(225, 195, 100); /* Light Tan */
     --accent-color1: #222; /* Dark Gray */
     --accent-color2: #222222e5; /* Less Dark Gray */
+    --accent-color3: #eeeeeee9; /* Darker white */
     --heading-font: "Times New Roman", Times, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -72,7 +73,7 @@ header img {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--accent-color3);
     background-color: var(--primary-color);
     border: 2px solid #fff;
 }
@@ -126,10 +127,8 @@ h1 {
     right: 4px;
     width: 800px;
     text-align: center;
-    opacity: .85;
     background-color: var(--primary-color);
-    /* color: #eeeeeee9; */
-    color: var(--secondary-color);
+    color: var(--accent-color3);
 }
 
 .hero article img {
