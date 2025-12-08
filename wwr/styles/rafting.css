@@ -2,8 +2,12 @@
     --primary-color: rgb(139, 0, 0); /* Dark Red */
     --secondary-color: rgb(225, 195, 100); /* Light Tan */
     --accent-color1: rgb(34, 34, 34); /* Dark Gray */
-    --accent-color2: rgba(34, 34, 34, 0.9); /* Less Dark Gray */
-    --accent-color3: rgba(238, 238, 238, 0.9); /* Darker white */
+    --accent-color2: rgba(34, 34, 34, 0.9); /* Transparent Dark Gray */
+    --accent-color3: rgba(238, 238, 238); /* Darker white */
+    --accent-color4: rgba(238, 238, 238, 0.9); /* Transparent Darker White */
+    --table-color1: rgb(139, 40, 40);
+    --table-color2: rgb(139, 65, 65);
+    --table-color3: rgb(139, 80, 80);
 }
 
 * {
@@ -15,6 +19,10 @@
 img {
     width: 100px;
     height: auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -38,7 +46,60 @@ figure {
     align-self: flex-end;
 }
 
-nav, p, section, article {
+table {
+    margin: 3rem auto;
+    border-collapse: collapse;
+    border: 2px solid var(--primary-color);
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    background-color: var(--table-color3);
+}
+
+th, td {
+    padding: .2rem .5rem;
+    border: 1px solid var(--accent-color2);
+    text-align: center;
+    color: var(--accent-color3);
+}
+
+thead th {
+    background-color: var(--primary-color);
+    color: var(--accent-color3);
+}
+
+.top-row th {
+    background-color: var(--table-color1);
+}
+
+.left-column {
+    background-color: var(--table-color2);
+}
+
+.level-end {
+    border-bottom: 2px solid var(--accent-color2)
+}
+
+article {
+    margin: auto;
+    padding: .5rem .5rem 1rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+article a {
+    margin: 1rem;
+    padding: .4rem;
+    border-radius: .2rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color3);
+}
+
+article p {
+    margin: 1rem 2rem;
+    padding: 0;
+}
+
+nav, p, section {
     margin: 16px;
     padding: 8px;
 }
@@ -76,7 +137,6 @@ header img {
 .navigation a {
     display: block;
     padding: 10px 20px;
-    text-decoration: none;
     color: var(--accent-color3);
     background-color: var(--primary-color);
     border: 2px solid rgb(255, 255, 255);
@@ -102,12 +162,17 @@ footer p {
 }
 
 .socialmedia a {
-    text-decoration: none;
     padding: 2px;
 }
 
 .socialmedia img {
     width: 32px;
+}
+
+.grid-title {
+    margin: 3rem auto .5rem;
+    text-align: center;
+    font-size: 2.2rem;
 }
 
 .hero {
@@ -135,18 +200,23 @@ footer p {
 
 .hero article {
     position: absolute;
-    bottom: -16px;
-    right: 4px;
+    margin: 0 1.25rem;
+    bottom: 0px;
     width: 800px;
     text-align: center;
     background-color: var(--primary-color);
-    color: var(--accent-color3);
+    color: var(--accent-color4);
 }
 
 .hero article img {
     float: right;
     width: 90px;
     padding-left: 10px;
+}
+
+.hero article p {
+    margin: 1.5rem;
+    padding: 0;
 }
 
 .contact {
@@ -171,8 +241,10 @@ footer p {
 
 .contact button {
     width: 100%;
+}
+
+button {
     padding: .5rem;
-    align-self: flex-end;
     border: none;
     background-color: var(--primary-color);
     color: var(--accent-color3);
@@ -187,7 +259,7 @@ button:hover {
 .user {
     display: grid;
     grid-template: repeat(2, 1fr) / 1fr 4fr;
-    grid-gap: .2rem;
+    gap: .2rem;
 }
 
 .user label {
@@ -228,11 +300,25 @@ button:hover {
     font-size: 1.1rem;
 }
 
+.newsletter {
+    margin: 0 .5rem;
+    padding: 0 1rem;
+    border: 1px solid var(--accent-color2);
+    border-radius: .3rem;
+}
+
+.newsletter button {
+    width: 4rem;
+    margin: 1rem auto 0;
+    display: block;
+    border-radius: .2rem;
+}
+
 .columns {
     margin: 1.5rem auto;
 }
 
-.columns h2 {
+.columns h2, h3 {
     text-align: center;
 }
 
@@ -256,13 +342,25 @@ button:hover {
     text-align: center;
 }
 
-.columns-1 img{
+.columns-1 img {
     width: 360px;
+}
+
+.columns-2 {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.columns-2 h2 {
+    margin: 1rem;
+    text-align: center;
 }
 
 .columns-3 {
     display: grid;
     grid-template: 3rem 2fr / 3fr 4fr 3fr;
+    gap: .5rem;
 }
 
 .columns-3 h2 {
@@ -271,6 +369,12 @@ button:hover {
 
 .columns-3 img {
     width: 240px;
+}
+
+.columns-3 article {
+    margin: 1.5rem .5rem;
+    padding: .5rem;
+    border-radius: .5rem;
 }
 
 .columns-5 {
@@ -284,4 +388,33 @@ button:hover {
 
 .columns-5 img {
     width: 150px;
+}
+
+.columns-3x2 {
+    margin: .5rem auto 3rem;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: .5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: .8rem;
+}
+
+.columns-3x2 img {
+    width: 90%;
+}
+
+.text-chunk {
+    margin: auto 1.5rem;
+}
+
+.text-chunk h3 {
+    margin: .5rem;
+    padding: .2rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color3);
+    border-radius: .5rem;
+}
+
+.text-chunk p {
+    text-align: center;
 }
