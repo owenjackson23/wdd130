@@ -1,0 +1,66 @@
+<!-- Four Questions: -->
+<!-- 
+    Q1: In CSS, the _____ property determines the amount of empty space around an element's border.
+    Q2: How are flex and grid similar? How are they different?
+    Q3: Which of these is the correct way to write a comment in HTML? (select one):
+    Q4: How many <h1> headings should an HTML document have?
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1>Web Development Quiz</h1>
+        <form>
+            <div>
+                <label for="q1">
+                    In CSS, the ________ property
+                    determines the amount of empty space around an element's border.
+                </label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+
+            <div>
+                <label for="q2">
+                    How are flex and grid similar? How are they different?
+                </label>
+                <textarea id="q2" name="q2" rows="6" required></textarea>
+            </div>
+
+            <div>
+                <label for="q3">
+                    Which of these is the correct way to write a comment in HTML?
+                </label>
+                <select id="q3" name="q3" required>
+                    <option value="" selected disabled>Select One:</option>
+                    <option value="1">/* Your comment */</option>
+                    <option value="2">// Your comment</option>
+                    <option value="3">*** Your comment ***</option>
+                    <option value="4">&lt;!-- Your comment --&gt;</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="q4">
+                    How many <strong>&lt;h1&gt;</strong> headings should an HTML document have?
+                </label>
+                <input type="number" id="q4" name="q4" required>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+
+        </form>
+    </main>
+    <footer>&copy;2025 | Web Development Quiz | Owen Jackson</footer>
+</body>
+
+</html>

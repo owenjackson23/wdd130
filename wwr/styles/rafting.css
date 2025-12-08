@@ -19,19 +19,25 @@ img {
     height: auto;
 }
 
+body {
+    font-family: var(--body-font);
+    color: var(--accent-color2);
+}
+
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--accent-color1);
+    margin-top: 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
 }
 
 figure {
     text-align: center;
     align-self: flex-end;
-}
-
-body {
-    font-family: var(--body-font);
-    color: var(--accent-color2);
 }
 
 nav, p, section, article {
@@ -79,25 +85,31 @@ header img {
 }
 
 footer {
+    margin-top: 1rem;
     border-top: 1px solid var(--accent-color2);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 footer p {
-    margin: auto 0;
+    margin: auto 3rem auto auto;
 }
 
 .socialmedia {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .socialmedia a {
     text-decoration: none;
+    padding: 2px;
+}
+
+.socialmedia img {
+    width: 32px;
 }
 
 .hero {
@@ -111,14 +123,16 @@ footer p {
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
+    margin: 0;
     padding: 16px;
     text-align: center;
     opacity: .8;
     background-color: var(--secondary-color);
+    color: var(--accent-color2);
 }
 
 .hero article {
@@ -137,46 +151,139 @@ h1 {
     padding-left: 10px;
 }
 
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact iframe {
+    width: 360px;
+    height: 21.5rem;
+    margin: .5rem;
+}
+
+.contact form {
+    margin: 0 2rem;
+}
+
+.contact textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+.contact button {
+    width: 100%;
+    padding: .5rem;
+    align-self: flex-end;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--accent-color3);
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color2)
+}
+
+.user {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1fr 4fr;
+    grid-gap: .2rem;
+}
+
+.user label {
+    margin: .5rem 0;
+}
+
+.message-purpose {
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr 4fr;
+    border: none;
+}
+
+.message-purpose p {
+    grid-row: span 3;
+    margin: auto 0;
+    padding: 0;
+}
+
+.message-purpose div {
+    margin: .2rem 0;
+}
+
+.checkbox {
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.employees figure {
+    margin: 0 .5rem;
+    padding: .6rem;
+    border-radius: .3rem;
+}
+
+.employees figcaption {
+    border-radius: .3rem;
+    color: var(--accent-color1);
+    font-size: 1.1rem;
+}
+
+.columns {
+    margin: 1.5rem auto;
+}
+
+.columns h2 {
+    text-align: center;
+}
+
+.columns img {
+    margin: 0 auto;
+    align-self: center;
+}
+
+.columns p {
+    margin: 0;
+    padding: 0;
+}
+
+.columns-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.columns-1 p {
+    text-align: center;
+}
+
+.columns-1 img{
+    width: 360px;
+}
+
 .columns-3 {
-    margin: 1rem auto 3rem;
     display: grid;
     grid-template: 3rem 2fr / 3fr 4fr 3fr;
 }
 
 .columns-3 h2 {
     grid-column: span 3;
-    text-align: center;
 }
 
 .columns-3 img {
     width: 240px;
-    margin: 0 auto;
-    align-self: center;
-}
-
-.columns-3 p {
-    margin: 0;
-    padding: 0;
 }
 
 .columns-5 {
-    margin: 1rem auto 3rem;
     display: grid;
     grid-template: 3rem 2fr / repeat(5, 1fr);
 }
 
 .columns-5 h2 {
     grid-column: span 5;
-    text-align: center;
 }
 
 .columns-5 img {
     width: 150px;
-    margin: 0 auto;
-    align-self: center;
-}
-
-.columns-5 p {
-    margin: 0;
-    padding: 0;
 }

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us: Dry Oar Rafting</title>
+    <title>Contact Us: Dry Oar Rafting</title>
     <meta name="description"
-        content="This is an 'About Us' page providing background information for a White Water Rafting Site">
+        content="This is a 'Contact Us' page providing contact information for a White Water Rafting Site">
     <meta name="author" content="Owen Jackson">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -24,11 +24,73 @@
         </nav>
     </header>
     <main>
-        <div class="hero">
+        <div class="columns columns-1">
+            <h1>Dry Oar Rafting</h1>
+            <p>7411 New River Rd</p>
+            <p>Glendale, Arizona</p>
+            <p>1-800-RAFTING</p>
+            <p>raftinginfo@dryoar.com</p>
+        </div>
+
+        <div class="contact">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2059.096249788476!2d-112.2848904309379!3d33.54120106725223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1765150733411!5m2!1sen!2sus"
+                width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <form>
+                <div class="user">
+                    <label for="fullname">Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Smith" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="jsmith@email.com" required>
+                </div>
+
+                <div class="message-purpose">
+                    <p>Message Purpose</p>
+                    <div>
+                        <input type="radio" id="general" name="purpose" value="1" required>
+                        <label for="general">General Inquiry</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="reservation" name="purpose" value="2">
+                        <label for="reservation">Reservation Question</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="suggestion" name="purpose" value="3">
+                        <label for="suggestion">Website Suggestion</label>
+                    </div>
+                </div>
+
+                <textarea id="message" name="message" rows="4" placeholder="Type here" required></textarea>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe" checked>
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit">Get in Touch!</button>
+            </form>
+        </div>
+        <div class="columns columns-3 employees">
+            <h2>We Are Here to Serve You</h2>
+            <figure>
+                <img src="images/rafting-instructor-2.jpg" alt="Sam" width="300">
+                <figcaption>Samuel Nguyun</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rafting-instructor-1.jpg" alt="James" width="300">
+                <figcaption>James Nodrik</figcaption>
+            </figure>
+            <figure><img src="images/rafting-instructor-3.jpg" alt="Sam" width="300">
+                <figcaption>Raul Manning</figcaption>
+            </figure>
+        </div>
+        <!-- <div class="hero">
             <img src="images/full-rafting-background.jpg" alt="Rafting Background Image" width="100">
             <h1>About Us - Dry Oar Rafting</h1>
             <article>
-                <img src="images/rafting-instructor-1.jpg" alt="Rafting Instructor" width="200">
+                <img src="images/rafting-instructor.jpg" alt="Rafting Instructor" width="200">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Harum molestiae quae laboriosam voluptatem voluptates perferendis culpa.
@@ -37,7 +99,7 @@
                 </p>
             </article>
         </div>
-        <section class="columns columns-3">
+        <section class="columns-3">
             <h2>History</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -53,7 +115,7 @@
                 Aliquam sint numquam porro beatae, nesciunt consequuntur rem est quasi!
             </p>
         </section>
-        <section class="columns columns-5">
+        <section class="columns-5">
             <h2>Adventure Awaits You!</h2>
             <figure>
                 <img src="images/rafting-orientation.jpg" alt="Orientation" width="200">
@@ -75,7 +137,7 @@
                 <img src="images/rafting-canyon-trip.jpg" alt="Beggar's Canyon" width="200">
                 <figcaption>Beggar's Canyon Trip</figcaption>
             </figure>
-        </section>
+        </section> -->
     </main>
     <footer>
         <p>&copy;2025 | Dry Oar Rafting | Owen Jackson</p>
